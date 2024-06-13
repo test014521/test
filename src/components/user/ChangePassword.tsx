@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { fetchChangePassword, fetchUser } from "../../features/action/accountAction"
-import { createToken } from "../../utils/constants"
+import { useAppDispatch } from "../../app/hooks"
+import { fetchChangePassword } from "../../features/action/accountAction"
 
 interface Props {
   setUpdateAction:(name:string)=>void

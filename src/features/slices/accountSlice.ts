@@ -29,11 +29,11 @@ const accountSlice = createAppSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchUser.pending,(state,action)=>{
-        // state!.stateMassage = "Pending...."
+        return {stateMassage:"Pending..."} as UserProfile;
       })
       .addCase(fetchUser.fulfilled,(state,action)=>action.payload)
       .addCase(fetchUser.rejected,(state,action)=>{
-        // state!.stateMassage = "Error...."
+        return {stateMassage:"Error!!!"} as UserProfile;
       })
   }
 

@@ -8,10 +8,10 @@ const LogIn = () => {
   const [login,setLogin] = useState("");
   const [password,setPassword] = useState("");
   const dispatch = useAppDispatch();
+
   function handleClickLogIn() {
     const token = createToken(login, password);
     dispatch(fetchUser(token))
-      .then(()=>dispatch(putToken(token)));
   }
 
   function handleClickClear() {
